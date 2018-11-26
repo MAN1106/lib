@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ScpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>scpage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card ion-item *ngFor="let tit of key; let i =index">
+        <ion-list>
+            <ion-item>Title         :       {{title[i]}}</ion-item>
+            <ion-item>Category      :       {{category[i]}}</ion-item>
+            <ion-item>Sub_Category  :       {{subcategory[i]}}</ion-item>
+            <ion-item>Price         :       {{price[i]}}</ion-item>
+            <ion-item>Source        :       {{source[i]}}</ion-item>
+            <ion-item>Published_Year:       {{publishedyear[i]}}</ion-item>
+            <ion-item>Publication   :       {{publication[i]}}</ion-item>
+            <ion-item>Author_Name   :       {{authorname[i]}}</ion-item>
+         </ion-list>
+    <!----<ion-list>
+        <button ion-item>
+          <ion-icon name="globe" item-start></ion-icon>Language settings
+        </button>
+      </ion-list> -->
+      
+    </ion-card>
+</ion-content>

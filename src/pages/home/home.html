@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background" >
+  
+  
+  <ion-list class = "margin ">
+    <ion-item>
+      <label>Username :</label><ion-input type="text" placeholder="E-mail" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <label>Password :</label><ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    </ion-list>
+    <button class ="button" ion-button (click)="login()">Login</button>
+    <button class ="button" ion-button color="light" (click)="goSignup()">Sign Up</button>
+    
+
+</ion-content>

@@ -1,0 +1,22 @@
+<!--
+  Generated template for the CategoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{val}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngIf="show">
+  <ion-item *ngFor = "let a of title; let i = index " ><ion-label (click)="move(i)"><b>{{a}}</b></ion-label></ion-item></ion-list>
+  <ion-list *ngIf="!show">
+  <ion-item *ngFor = "let a of key; let i = index " ><ion-label (click)="move(i)"><b>{{a}}</b></ion-label><ion-badge item-end>{{len[i]}}</ion-badge></ion-item></ion-list>
+</ion-content>
+<!-- <ion-badge item-end>{{len[i]}}</ion-badge> -->

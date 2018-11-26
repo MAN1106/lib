@@ -1,0 +1,56 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    
+  
+        
+          <ion-title>Search</ion-title>  
+    </ion-navbar>
+  
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-fab right top>
+        <button ion-fab color="light"><ion-icon name="funnel"></ion-icon></button>
+        <ion-fab-list side="left">
+          
+          <button ion-fab (click)="book()"><ion-icon name="wifi"></ion-icon><ion-checkbox [(ngModel)]="hi" disabled></ion-checkbox></button>
+          <button ion-fab (click)="price()"><ion-icon name="pricetag"></ion-icon><ion-checkbox [(ngModel)]="hi1" disabled></ion-checkbox></button>
+          <button ion-fab (click)="author()"><ion-icon name="person"></ion-icon><ion-checkbox [(ngModel)]="hi2" disabled></ion-checkbox></button>
+          <button ion-fab (click)="category1()"><ion-icon name="paper"></ion-icon><ion-checkbox [(ngModel)]="hi3" disabled></ion-checkbox></button>
+          <button ion-fab (click)="published()"><ion-icon name="calendar"></ion-icon><ion-checkbox [(ngModel)]="hi4" disabled></ion-checkbox></button>
+        </ion-fab-list>
+      </ion-fab>
+  <ion-input type="text" placeholder="{{node}}" [(ngModel)]="sub_node" ></ion-input>
+  <ion-input type="text" placeholder="To" [(ngModel)]="sub_node1" *ngIf="!h" ></ion-input>    
+  <!--<ion-input type="text" placeholder="Author" [(ngModel)]="sub_node" [hidden]="hi2"></ion-input>
+  <ion-input type="text" placeholder="Category" [(ngModel)]="sub_node" [hidden]="hi3"></ion-input>
+  <ion-input type="text" placeholder="Published_Year" [(ngModel)]="sub_node" [hidden]="hi4"></ion-input> -->
+  <button ion-button color="light" (click)="search(hi,hi1,hi2,hi3,hi4)">Search</button>
+  <ion-card *ngFor="let tit of title">
+    <ion-list>
+        <ion-item>Title : {{tit[0]}}</ion-item>
+        <ion-item>Category : {{tit[1]}}</ion-item>
+        <ion-item>Sub Category : {{tit[2]}}</ion-item>
+        <ion-item>Price  : {{tit[3]}}</ion-item>
+        <ion-item>Source : {{tit[4]}}</ion-item>
+        <ion-item>Published year : {{tit[5]}}</ion-item>
+        <ion-item>Publication : {{tit[6]}}</ion-item>
+        <ion-item>Author : {{tit[7]}}</ion-item>
+     </ion-list>
+    <!----<ion-list>
+        <button ion-item>
+          <ion-icon name="globe" item-start></ion-icon>Language settings
+        </button>
+      </ion-list> -->
+      
+    </ion-card>
+</ion-content>
